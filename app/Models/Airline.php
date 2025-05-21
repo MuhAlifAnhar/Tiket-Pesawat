@@ -13,4 +13,9 @@ class Airline extends Model
         'name',
         'logo'
     ];
+
+    public function flights()
+    {
+        return $this->hasMany(Flight::class);
+    }
 }
