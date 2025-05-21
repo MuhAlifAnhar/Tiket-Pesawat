@@ -4,7 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\FacilityResource\Pages;
 use App\Filament\Resources\FacilityResource\RelationManagers;
-use App\Models\Facility;
+use App\Models\Facilty;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -15,7 +15,7 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class FacilityResource extends Resource
 {
-    protected static ?string $model = Facility::class;
+    protected static ?string $model = Facilty::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
@@ -23,7 +23,17 @@ class FacilityResource extends Resource
     {
         return $form
             ->schema([
-                //
+                Forms\Components\FileUpload::make('image')
+                    ->required()
+                    ->image()
+                    ->directory('airports')
+                    ->columnSpan(2),
+                Forms\Components\TextInput::make('name')
+                    ->required()
+                    ->maxLength(255),
+                Forms\Components\TextInput::make('description')
+                    ->required()
+                    ->maxLength(255),
             ]);
     }
 
@@ -31,13 +41,17 @@ class FacilityResource extends Resource
     {
         return $table
             ->columns([
-                //
+                Tables\Columns\ImageColumn::make('image'),
+                Tables\Columns\TextColumn::make('name'),
+                Tables\Columns\TextColumn::make('description'),
             ])
             ->filters([
                 //
             ])
             ->actions([
+                Tables\Actions\ViewAction::make(),
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
