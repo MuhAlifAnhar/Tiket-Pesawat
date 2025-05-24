@@ -7,7 +7,7 @@ use App\Models\Airline;
 
 class AirlineRepository implements AirlineRepositoryInterface
 {
-    public function gettAllAirlines()
+    public function getAllAirlines()
     {
         return Airline::all();
     }
