@@ -20,6 +20,7 @@ class RepositoryServiceProvider extends ServiceProvider
     public function register(): void
     {
         $this->app->bind(AirlineRepositoryInterface::class, AirlineRepository::class);
+        
         $this->app->bind(AirportRepositoryInterface::class, AirportRepository::class);
         $this->app->bind(FlightRepositoryInterface::class, FlightRepository::class);
         $this->app->bind(TransactionRepositoryInterface::class, TransactionRepository::class);
