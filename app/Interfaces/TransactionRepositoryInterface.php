@@ -14,5 +14,3 @@ interface TransactionRepositoryInterface
 
     public function getTransactionByCodeEmailPhone($code, $email, $phone);
 }
-
-
