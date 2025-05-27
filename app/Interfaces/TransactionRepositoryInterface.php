@@ -6,7 +6,6 @@ interface TransactionRepositoryInterface
 {
     public function getTransactionDataFromSession();
 
-
     public function saveTransactionDataToSession($data);
 
 
@@ -14,7 +13,7 @@ interface TransactionRepositoryInterface
 
 
     public function getTransactionByCode($code);
-    
+
 
     public function getTransactionByCodeEmailPhone($code, $email, $phone);
 
