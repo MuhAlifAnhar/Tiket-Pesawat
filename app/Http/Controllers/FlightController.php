@@ -20,11 +20,12 @@ class FlightController extends Controller
     function index(Request $request)
     {
         $airlines = $this->airlineRepository->getAllAirlines();
-        
+
         $flights = $this->flightRepository->getAllFlights([
 
         ]);
 
         return view('pages.flight.index', compact('airlines'));
+        
     }
 }
