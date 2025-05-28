@@ -4,12 +4,13 @@ namespace App\Repositories;
 
 use App\Interfaces\AirportRepositoryInterface;
 use App\Models\Airport;
+use App\Models\Airline;
 
 class AirportRepository implements AirportRepositoryInterface
 {
     public function getAllAirports()
     {
-        return Airline::all();
+        return Airport::all();
     }
 
     public function getAirportBySlug($slug)

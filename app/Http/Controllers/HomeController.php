@@ -3,11 +3,21 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Interfaces\AirportRepositoryInterface;
 
 class HomeController extends Controller
 {
+    private AirportRepositoryInterface $airportRepository;
+
+    public function __construct(AirportRepositoryInterface $airportRepository)
+    {
+        $this->airportRepository = $airportRepository;
+    }
+
     public function index()
     {
-        return view('pages.home');
+        $airports = $this->airportRepository->getAllAirports();
+
+        return view('pages.home', compact('airports'));
     }
 }
