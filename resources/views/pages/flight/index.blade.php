@@ -277,8 +277,9 @@
                             </label>
 
                             <hr class="border-[#E8EFF7]">
-                            
+
                             <div class="accordion-content flex justify-between">
+                                
                                 <div class="left-content flex flex-col gap-[10px]">
                                     <div class="departure flex items-center gap-5">
                                         <div class="text-center w-[83px]">
