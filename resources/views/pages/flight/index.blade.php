@@ -275,6 +275,7 @@
                                     <span class="font-semibold text-white">Choose</span>
                                 </a>
                             </label>
+                            
                             <hr class="border-[#E8EFF7]">
                             <div class="accordion-content flex justify-between">
                                 <div class="left-content flex flex-col gap-[10px]">
