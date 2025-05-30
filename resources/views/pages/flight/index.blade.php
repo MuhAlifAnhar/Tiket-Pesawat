@@ -82,6 +82,7 @@
             <div id="Result" class="flex flex-col w-full h-fit rounded-3xl p-5 gap-5 bg-white">
                 <h2 class="font-bold text-xl leading-[30px]">Available Flights</h2>
                 @foreach ($flights as $flight)
+                
                     @if ($flight->segments->count() > 2)
 
                         <div
