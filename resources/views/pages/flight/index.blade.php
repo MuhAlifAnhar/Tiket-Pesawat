@@ -96,11 +96,12 @@
                                             {{ $flight->segments->last()->time->format('H:i') }}</p>
                                     </div>
                                 </div>
-                                
+
                                 <div class="flex flex-col gap-[2px] items-center justify-center">
                                     <p class="text-sm text-garuda-grey">
                                         {{ number_format($flight->segments->first()->time->diffInHours($flight->segments->last()->time), 0) }}
                                         hours</p>
+                                        
                                     <div class="flex items-center gap-[6px]">
                                         <p class="font-semibold">{{ $flight->segments->first()->airport->iata_code }}</p>
                                         <img src="assets/images/icons/transit-black.svg" alt="icon">
