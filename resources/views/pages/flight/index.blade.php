@@ -107,7 +107,6 @@
                                         <img src="assets/images/icons/transit-black.svg" alt="icon">
                                         <p class="font-semibold">{{ $flight->segments->last()->airport->iata_code }}</p>
                                     </div>
-                                    
                                     <p class="text-sm text-garuda-grey">Transit {{ $flight->segments->count() - 2 }}x</p>
                                 </div>
                                 <p class="min-w-[120px] font-semibold text-garuda-green text-center">
