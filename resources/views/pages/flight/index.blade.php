@@ -82,7 +82,7 @@
                 <h2 class="font-bold text-xl leading-[30px]">Available Flights</h2>
                 @foreach ($flights as $flight)
                     @if ($flight->segments->count() > 2)
-                    
+
                         <div
                             class="transit-card accordion flex flex-col w-full rounded-[20px] border border-garuda-blue py-5 px-6 gap-5 overflow-hidden has-[:checked]:!h-[110px] has-[:checked]:border-[#E8EFF7] hover:!border-garuda-blue transition-all duration-300">
                             <label class="accordion-trigger flex items-center justify-between">
@@ -90,6 +90,7 @@
                                 <div class="flex items-center gap-[10px]">
                                     <img src="{{ asset('storage/' . $flight->airline->logo) }}"
                                         class="w-[60px] h-[60px] flex shrink-0" alt="logo">
+                                        
                                     <div>
                                         <p class="font-semibold">{{ $flight->airline->name }}</p>
                                         <p class="text-sm text-garuda-grey mt-[2px]">
