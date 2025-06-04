@@ -88,7 +88,7 @@
                             <label class="accordion-trigger flex items-center justify-between">
                                 <input type="checkbox" name="accordion-input" class="hidden" checked>
                                 <div class="flex items-center gap-[10px]">
-                                    
+
                                     <img src="{{ asset('storage/' . $flight->airline->logo) }}"
                                         class="w-[60px] h-[60px] flex shrink-0" alt="logo">
 
@@ -98,8 +98,9 @@
                                             {{ $flight->segments->first()->time->format('H:i') }} -
                                             {{ $flight->segments->last()->time->format('H:i') }}</p>
                                     </div>
-                                    
+
                                 </div>
+                                
                                 <div class="flex flex-col gap-[2px] items-center justify-center">
                                     <p class="text-sm text-garuda-grey">
                                         {{ number_format($flight->segments->first()->time->diffInHours($flight->segments->last()->time), 0) }}
