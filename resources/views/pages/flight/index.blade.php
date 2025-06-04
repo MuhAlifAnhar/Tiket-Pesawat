@@ -100,7 +100,7 @@
                                     </div>
 
                                 </div>
-                                
+
                                 <div class="flex flex-col gap-[2px] items-center justify-center">
                                     <p class="text-sm text-garuda-grey">
                                         {{ number_format($flight->segments->first()->time->diffInHours($flight->segments->last()->time), 0) }}
@@ -112,6 +112,7 @@
                                     </div>
                                     <p class="text-sm text-garuda-grey">Transit {{ $flight->segments->count() - 2 }}x</p>
                                 </div>
+                                
                                 <p class="min-w-[120px] font-semibold text-garuda-green text-center">
                                     {{ 'Rp ' . number_format($flight->classes->first()->price, 0, ',', '.') }}</p>
                                 <a href="choose-tiers.html"
