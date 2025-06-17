@@ -20,7 +20,8 @@
         <p class="text-lg leading-8">Your truly great experience starts here with us <br>that lorem dolor amet si package
             exclusively matter.</p>
     </div>
-    <form action="available-flights.html" class="relative flex flex-col w-full max-w-[1280px] px-[75px] mx-auto mt-[86px]">
+    <form action="{{ route('flight.index') }}" method="GET"
+        class="relative flex flex-col w-full max-w-[1280px] px-[75px] mx-auto mt-[86px]">
         <div class="flex flex-col rounded-[30px] p-[30px] gap-4 bg-white">
             <h2 class="font-bold text-xl leading-[30px]">Book Your Next Flight</h2>
             <div class="flex items-center gap-5">
@@ -43,7 +44,7 @@
                                 @foreach ($airports as $airport)
                                     <label
                                         class="relative flex items-center rounded-[10px] gap-[10px] p-0 has-[:checked]:p-[10px] has-[:checked]:bg-garuda-bg-grey transition-all duration-300">
-                                        <input type="radio" name="departure-radio" id="{{ $airport->iata_code }}"
+                                        <input type="radio" name="departure" id="{{ $airport->iata_code }}"
                                             class="absolute top-1/2 left-1/2 opacity-0" value="{{ $airport->iata_code }}">
                                         <img src="assets/images/icons/airplane-black.svg" class="flex shrink-0 w-[34px]"
                                             alt="icon">
@@ -73,7 +74,7 @@
                                 @foreach ($airports as $airport)
                                     <label
                                         class="relative flex items-center rounded-[10px] gap-[10px] p-0 has-[:checked]:p-[10px] has-[:checked]:bg-garuda-bg-grey transition-all duration-300">
-                                        <input type="radio" name="departure-radio" id="{{ $airport->iata_code }}"
+                                        <input type="radio" name="arrival" id="{{ $airport->iata_code }}"
                                             class="absolute top-1/2 left-1/2 opacity-0" value="{{ $airport->iata_code }}">
                                         <img src="assets/images/icons/airplane-black.svg" class="flex shrink-0 w-[34px]"
                                             alt="icon">
