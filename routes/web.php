@@ -15,4 +15,3 @@ Route::get('flight/booking/{flightNumber}', [BookingController::class, 'booking'
 
 
 Route::get('check-booking', [BookingController::class, 'checkBooking'])->name('booking.check');
-
