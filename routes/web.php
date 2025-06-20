@@ -8,6 +8,7 @@ use App\Http\Controllers\BookingController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
+
 Route::get('/flight', [FlightController::class, 'index'])->name('flight.index');
 Route::get('/flight/{flightNumber}/choose-tier', [FlightController::class, 'show'])->name('flight.show');
 
