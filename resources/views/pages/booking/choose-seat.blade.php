@@ -98,11 +98,12 @@
                                         class="w-full h-full object-cover" alt="icon">
                                 </div>
                                 <div>
+                                    
                                     <p class="font-bold text-xl leading-[30px]">{{ \Str::ucfirst($tier->class_type) }}
                                         Class</p>
                                     <p class="text-garuda-grey mt-1">{{ 'Rp ' . number_format($tier->price, 0, ',', '.') }}
                                     </p>
-                                    
+
                                 </div>
                             </div>
                         </div>
