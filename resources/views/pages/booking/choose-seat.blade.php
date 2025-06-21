@@ -102,6 +102,7 @@
                                         Class</p>
                                     <p class="text-garuda-grey mt-1">{{ 'Rp ' . number_format($tier->price, 0, ',', '.') }}
                                     </p>
+                                    
                                 </div>
                             </div>
                         </div>
