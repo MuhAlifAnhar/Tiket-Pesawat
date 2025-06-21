@@ -23,13 +23,13 @@
                     <div>
                         <p class="text-sm text-garuda-grey">Departure</p>
                         <p class="font-semibold text-lg">
-                            {{ $flight->segments->first()->airport->name }}
+                            {{ $flight->segments->first()->airport->city }}
                             ({{ $flight->segments->first()->airport->iata_code }})
                         </p>
                     </div>
                     <div class="text-end">
                         <p class="text-sm text-garuda-grey">Arrival</p>
-                        <p class="font-semibold text-lg">{{ $flight->segments->last()->airport->name }}
+                        <p class="font-semibold text-lg">{{ $flight->segments->last()->airport->city }}
                             ({{ $flight->segments->last()->airport->iata_code }})</p>
                     </div>
                 </div>
@@ -114,10 +114,11 @@
                                 <p class="font-semibold">{{ $facility->name }}</p>
                             </div>
                         @endforeach
-                        <a href="choose-seats-economy.html"
-                            class="w-full rounded-full py-3 px-5 text-center bg-garuda-blue hover:shadow-[0px_14px_30px_0px_#0068FF66] transition-all duration-300">
+                        <button
+                            class="w-full rounded-full py-3 px-5 text-center bg-garuda-blue hover:shadow-[0px_14px_30px_0px_#0068FF66] transition-all duration-300"
+                            onclick="document.getElementById('flight_class_id').value = {{ $class->id }}">
                             <span class="font-semibold text-white">Choose</span>
-                        </a>
+                        </button>
                     </div>
                 @endforeach
             </form>
