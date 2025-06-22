@@ -26,8 +26,9 @@
                         </div>
 
                     </div>
-                    
+
                     <div class="flex flex-col gap-5">
+                        
                         <p class="font-semibold">Phone No.</p>
                         <div
                             class="flex items-center rounded-full border border-garuda-black py-3 px-5 gap-[10px] focus-within:border-[#0068FF] transition-all duration-300">
