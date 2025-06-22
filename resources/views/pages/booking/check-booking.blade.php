@@ -24,8 +24,9 @@
                                 class="appearance-none outline-none w-full font-semibold placeholder:font-normal"
                                 placeholder="Write your booking id">
                         </div>
-                        
+
                     </div>
+                    
                     <div class="flex flex-col gap-5">
                         <p class="font-semibold">Phone No.</p>
                         <div
