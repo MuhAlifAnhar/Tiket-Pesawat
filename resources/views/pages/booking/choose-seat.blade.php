@@ -224,6 +224,7 @@
     </main>
 @endsection
 
+
 @section('scripts')
     <script>
         const basePrice = {{ $tier->price }};
