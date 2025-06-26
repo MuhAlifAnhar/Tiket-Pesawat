@@ -31,6 +31,7 @@ class BookingController extends Controller
 
         return view('pages.booking.choose-seat', compact('transaction', 'flight', 'tier'));
     }
+    
 
     public function confirm
 
