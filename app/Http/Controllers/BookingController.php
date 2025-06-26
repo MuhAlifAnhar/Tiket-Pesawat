@@ -16,13 +16,14 @@ class BookingController extends Controller
         $this->transactionRepository = $transactionRepository;
         $this->flightRepository = $flightRepository;
     }
+    
 
     public function booking(Request $request, $flightNumber){
         // dd($request->all());
         $this->transactionRepository->saveTransactionDataToSession($request->all());
         return redirect()->route('booking.chooseSeat', ['flightNumber' => $flightNumber]);
     }
-    
+
 
     public function chooseSeat(Request $request, $flightNumber){
         // dd($request->all());
