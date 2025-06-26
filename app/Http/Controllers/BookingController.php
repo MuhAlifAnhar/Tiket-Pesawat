@@ -29,16 +29,10 @@ class BookingController extends Controller
         $flight = $this->flightRepository->getFlightByFlightNumber($flightNumber);
         $tier = $flight->classes->find($transaction['flight_class_id']);
 
-        // dd([
-        //     'flight_class_id_in_transaction' => $transaction['flight_class_id'],
-        //     'available_classes' => $flight->classes->pluck('id', 'class_type'),
-        // ]);
-
-
-        // dd($tier);
-
         return view('pages.booking.choose-seat', compact('transaction', 'flight', 'tier'));
     }
+
+    public function confirm
 
     public function checkBooking()
     {
