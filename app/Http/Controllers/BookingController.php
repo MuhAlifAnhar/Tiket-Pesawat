@@ -18,7 +18,6 @@ class BookingController extends Controller
     }
 
 
-
     public function booking(Request $request, $flightNumber){
         // dd($request->all());
         $this->transactionRepository->saveTransactionDataToSession($request->all());
