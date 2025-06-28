@@ -10,7 +10,7 @@ class BookingController extends Controller
 {
     private TransactionRepositoryInterface $transactionRepository;
     private FlightRepositoryInterface $flightRepository;
-    
+
 
     public function __construct(TransactionRepositoryInterface $transactionRepository, FlightRepositoryInterface $flightRepository)
     {
@@ -18,6 +18,7 @@ class BookingController extends Controller
         $this->flightRepository = $flightRepository;
     }
 
+    
 
     public function booking(Request $request, $flightNumber){
         // dd($request->all());
