@@ -25,7 +25,6 @@ class BookingController extends Controller
         return redirect()->route('booking.chooseSeat', ['flightNumber' => $flightNumber]);
     }
 
-
     public function chooseSeat(Request $request, $flightNumber){
         // dd($request->all());
         $transaction = $this->transactionRepository->getTransactionDataFromSession();
