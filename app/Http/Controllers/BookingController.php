@@ -33,7 +33,11 @@ class BookingController extends Controller
     }
 
 
-    public function confirm
+    public function confirmSeat(Request $request, $flightNumber){
+        dd($request->all());
+        $this->transactionRepository->saveTransactionDataToSession($request->all());
+        return redirect()->route('booking.checkBooking');
+    }
 
     public function checkBooking()
     {
