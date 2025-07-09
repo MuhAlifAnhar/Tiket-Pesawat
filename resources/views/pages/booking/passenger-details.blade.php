@@ -185,8 +185,9 @@
                                     class="appearance-none outline-none w-full font-semibold placeholder:font-normal"
                                     placeholder="Write your active number">
                             </div>
-                            
+
                         </label>
+                        
                     </div>
                 </div>
                 <!-- for accordions with select input inside, the script was different from the normal accordion -->
