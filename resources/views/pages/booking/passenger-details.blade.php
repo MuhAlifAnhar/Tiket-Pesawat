@@ -188,7 +188,6 @@
                         </label>
                     </div>
                 </div>
-
                 <!-- for accordions with select input inside, the script was different from the normal accordion -->
                 @foreach ($transaction['selected_seats'] as $transaction)
 
