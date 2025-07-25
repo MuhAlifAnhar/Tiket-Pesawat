@@ -186,7 +186,6 @@
                                     placeholder="Write your active number">
                             </div>
                         </label>
-
                     </div>
 
                 </div>
