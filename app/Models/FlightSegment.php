@@ -23,8 +23,9 @@ class FlightSegment extends Model
 
     public function flight()
     {
-        
+
         return $this->belongsTo(Flight::class);
+        
     }
 
     public function airport()
