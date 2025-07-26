@@ -32,10 +32,11 @@
                         <p class="font-semibold text-lg">{{ $flight->segments->last()->airport->city }}
                             ({{ $flight->segments->last()->airport->iata_code }})</p>
                     </div>
-                    
+
                 </div>
                 <div class="flex justify-between">
                     <div>
+                        
                         <p class="text-sm text-garuda-grey">Date</p>
                         <p class="font-semibold text-lg">{{ $flight->segments->first()->time->format('d F y') }}</p>
                     </div>
